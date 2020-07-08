@@ -1,0 +1,21 @@
+.work-examples__more-link {
+    display: none;
+}
+
+@media (min-width: $desktop-width) {
+    .work-examples__more-link {
+        display: inline;
+
+        font-size: 18px;
+        line-height: 27px;
+        color: $lightwhite;
+        text-transform: none;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $white;
+        }
+
+    }
+}

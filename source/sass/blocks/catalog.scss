@@ -1,0 +1,20 @@
+.catalog__title {
+    @include heading-reset;
+
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: 0.06em;
+}
+
+.catalog__list {
+    @include list-reset;
+}
+
+
+@media (min-width: $tablet-width) {
+    .catalog__title {
+        font-size: 30px;
+        line-height: 33px;
+        text-align: center;
+    }
+}

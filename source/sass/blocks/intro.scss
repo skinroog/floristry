@@ -1,0 +1,43 @@
+.intro {
+    background: url("../../img/main-background-mobile@1x.jpg") no-repeat 0 0;
+    background-size: cover;
+}
+
+.intro__title {
+    @include heading-reset;
+
+    font-size: 30px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.09em;
+}
+
+.intro__arrow-down-text {
+    display: none;
+}
+
+@media (min-width: $tablet-width) {
+    .intro__title {
+        font-size: 70px;
+        line-height: 77px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .intro__title {
+        font-size: 120px;
+        line-height: 132px;
+    }
+
+    .intro__arrow-down-text {
+        display: inline;
+
+        font-size: 20px;
+        line-height: 22px;
+        letter-spacing: 0.06em;
+        color: $white;
+        text-transform: lowercase;
+    }
+
+}
+

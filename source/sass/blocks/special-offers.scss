@@ -1,0 +1,23 @@
+.special-offers__title {
+    @include heading-reset;
+
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: 0.06em;
+}
+
+.special-offers__desc {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: none;
+}
+
+@media (min-width: $tablet-width) {
+    .special-offers__title {
+        font-size: 30px;
+        line-height: 51px;
+        text-align: center;
+    }
+}

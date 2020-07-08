@@ -1,0 +1,44 @@
+.button {
+    font-size: 10px;
+    line-height: 11px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    color: $white;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid $white;
+    outline: none;
+
+    &:hover {
+        color: $black;
+
+        background-color: $white;
+    }
+
+    &--transparent {
+        background-color: transparent;
+    }
+
+    &--black {
+        background-color: $black;
+        border: none;
+    }
+}
+
+
+
+@media (min-width: $tablet-width) {
+    .button {
+        font-size: 15px;
+        line-height: 17px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .button {
+        font-size: 12px;
+        line-height: 13px;
+    }
+
+}
+

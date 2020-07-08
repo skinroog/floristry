@@ -114,6 +114,12 @@ function img() {
     .pipe(browsersync.stream());
 }
 
+function fonts() {
+    return src(path.source.fonts)
+    .pipe(dest(path.build.fonts))
+    .pipe(browsersync.stream());
+}
+
 gulp.task('svgSprite', function () {
     return gulp.src([source_folder + '/img/svgsprite/*.svg'])
     .pipe(sprite({
@@ -137,12 +143,14 @@ function clean() {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(html, css, js, img));
+let build = gulp.series(clean, gulp.parallel(html, css, js, img, fonts));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 
 exports.watch = watch;
 exports.default = watch;
+
+exports.css = css;
 
 
 

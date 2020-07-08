@@ -1,0 +1,21 @@
+@import "mixins";
+@import "variables";
+@import "scaffholding";
+@import "global";
+
+@import "../../node_modules/normalize.css/normalize";
+
+@import "blocks/page-header";
+@import "blocks/main-nav";
+@import "blocks/page-main";
+@import "blocks/intro";
+@import "blocks/social-links";
+@import "blocks/catalog";
+@import "blocks/catalog-card";
+@import "blocks/button";
+@import "blocks/special-offers";
+@import "blocks/page-footer";
+@import "blocks/modal";
+@import "blocks/item-picture";
+@import "blocks/catalog-item";
+@import "blocks/work-examples";

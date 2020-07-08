@@ -1,0 +1,42 @@
+.page-footer__menu-list {
+    @include list-reset;
+    text-align: center;
+
+}
+
+.page-footer__menu-link {
+    font-size: 16px;
+    line-height: 18px;
+    color: $lightwhite;
+    text-transform: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    &--current:hover,
+    &--current:focus,
+    &--current:active {
+        color: $lightwhite;
+    }
+}
+
+.page-footer__social-list {
+    @include list-reset;
+}
+
+@media (min-width: $tablet-width) {
+    .page-footer__menu-link {
+        font-size: 20px;
+        line-height: 22px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .page-footer__menu-link {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
