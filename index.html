@@ -2,6 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.min.css">
         <title>Весна всегда</title>
     </head>
@@ -11,7 +12,11 @@
                 <img class="page-header__logo-picture" src="" alt="Логотип интернет-магазина Весна всегда">
             </a>
             <nav class="page-header__nav main-nav">
-                <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть/закрыть меню</span></button>
+                <p class="main-nav__toggle-wrapper">
+                    <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть/закрыть меню</span></button>
+                    <span class="main-nav__toggle-text">Меню</span>
+                </p>
+
                 <ul class="main-nav__list">
                     <li class="main-nav__item"><a class="main-nav__link" href="weddings.html">Свадебная флористика</a></li>
                     <li class="main-nav__item"><a class="main-nav__link" href="bouquets.html">Букеты на любые мероприятия</a></li>
@@ -27,7 +32,7 @@
                 <h1 class="visually-hidden">Интернет-магазин цветов "Весна всегда"</h1>
 
                 <h2 class="intro__title">Флористика с душой</h2>
-                <a class="intro__button" type="button">Смотреть работы</a>
+                <a class="intro__button button" href="#catalog">Смотреть работы</a>
 
                 <div class="intro__social-links social-links">
                     <p class="visually-hidden">Мы в социальных сетях</p>
@@ -64,7 +69,7 @@
 
             </section>
 
-            <section class="catalog" id="catalog">
+            <section class="catalog" id="catalog" id="catalog">
                 <h2 class="catalog__title">Каталог услуг</h2>
 
                 <ul class="catalog__list">
@@ -74,7 +79,8 @@
                             <a class="catalog-card__link button" href="weddings.html">Смотреть работы</a>
                         </div>
                         <span class="catalog-card__number">01</span>
-                        <img class="catalog-card__picture catalog-card__picture--weddings" src="" alt="Изображение Букет невесты и свадебное оформление">
+                        <img class="catalog-card__picture catalog-card__picture--weddings" src="" alt="Букет невесты">
+                        <div class="catalog-card__overlay"></div>
                     </li>
                     <li class="catalog__item catalog-card">
                         <div class="catalog-card__caption">
@@ -82,7 +88,8 @@
                             <a class="catalog-card__link button" href="bouquets.html">Смотреть работы</a>
                         </div>
                         <span class="catalog-card__number">02</span>
-                        <img class="catalog-card__picture catalog-card__picture--bouquets" src="" alt="Изображение Букеты на торжества">
+                        <img class="catalog-card__picture catalog-card__picture--bouquets" src="" alt="Букет на торжество">
+                        <div class="catalog-card__overlay"></div>
                     </li>
                     <li class="catalog__item catalog-card">
                         <div class="catalog-card__caption">
@@ -90,7 +97,8 @@
                             <a class="catalog-card__link button" href="composition.html">Смотреть работы</a>
                         </div>
                         <span class="catalog-card__number">03</span>
-                        <img class="catalog-card__picture catalog-card__picture--composition" src="" alt="Изображение Композиции">
+                        <img class="catalog-card__picture catalog-card__picture--composition" src="" alt="Композиция">
+                        <div class="catalog-card__overlay"></div>
                     </li>
                     <li class="catalog__item catalog-card">
                         <div class="catalog-card__caption">
@@ -98,7 +106,8 @@
                             <a class="catalog-card__link button" href="events.html">Смотреть работы</a>
                         </div>
                         <span class="catalog-card__number">04</span>
-                        <img class="catalog-card__picture catalog-card__picture--events" src="" alt="Изображение Оформление мероприятий">
+                        <img class="catalog-card__picture catalog-card__picture--events" src="" alt="Оформление мероприятия">
+                        <div class="catalog-card__overlay"></div>
                     </li>
                 </ul>
 
@@ -107,7 +116,7 @@
             </section>
 
             <section class="special-offers">
-                <img class="special-offer__picture" src="" alt="Изображение свадебного оформления">
+                <img class="special-offer__picture" src="" alt="Свадебное оформление">
                 <h2 class="special-offers__title">Акционные предложения</h2>
                 <p class="special-offers__desc">При заказе свадебного оформления предоставляется скидка на букет невесты и бутоньерку в размере 30%</p>
                 <button class="special-offer__order-button button button--black">Заказать оформление</button>
