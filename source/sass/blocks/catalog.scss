@@ -1,3 +1,8 @@
+.catalog {
+    padding: 0 5%;
+
+}
+
 .catalog__title {
     @include heading-reset;
 
@@ -12,9 +17,19 @@
 
 
 @media (min-width: $tablet-width) {
+    .catalog {
+        padding: 0 2.6%;
+    }
+
     .catalog__title {
         font-size: 30px;
         line-height: 33px;
         text-align: center;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .catalog {
+        padding: 0 1.3%;
     }
 }

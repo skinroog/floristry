@@ -1,3 +1,8 @@
+.modal {
+    width: 288px;
+    padding: 52px 20px;
+}
+
 .modal__title {
     @include heading-reset;
 
@@ -38,6 +43,11 @@
 }
 
 @media (min-width: $tablet-width) {
+    .modal {
+        width: 464px;
+        padding: 78px 45px;
+    }
+
     .modal__title {
         font-size: 30px;
         line-height: 33px;
@@ -50,6 +60,11 @@
 }
 
 @media (min-width: $desktop-width) {
+    .modal {
+        width: 716px;
+        padding: 66px;
+    }
+
     .modal__title {
         font-size: 20px;
         line-height: 22px;

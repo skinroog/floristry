@@ -1,0 +1,22 @@
+@media (min-width: $tablet-width) {
+    .page-main--inner__catalog-examples-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page-main--inner__catalog-item {
+        order: 5;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .page-main--inner {
+        display: flex;
+    }
+
+    .page-main--inner__catalog-item {
+        order: 0;
+    }
+}
+
+

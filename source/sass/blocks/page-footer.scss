@@ -1,3 +1,7 @@
+.page-footer {
+    padding: 0 5%;
+}
+
 .page-footer__menu-list {
     @include list-reset;
     text-align: center;
@@ -28,6 +32,9 @@
 }
 
 @media (min-width: $tablet-width) {
+    .page-footer {
+        padding: 40px 5.2%;
+    }
     .page-footer__menu-link {
         font-size: 20px;
         line-height: 22px;
@@ -35,6 +42,9 @@
 }
 
 @media (min-width: $desktop-width) {
+    .page-footer {
+        padding: 30px 5.2%;
+    }
     .page-footer__menu-link {
         font-size: 16px;
         line-height: 18px;
