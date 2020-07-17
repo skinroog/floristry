@@ -1,11 +1,36 @@
 .page-footer {
     padding: 0 5%;
+    padding-bottom: 30px;
+}
+
+.page-footer__menu-wrapper {
+    position: relative;
+
+    padding-top: 29px;
+    margin-bottom: 47px;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+        width: 100%;
+        height: 1px;
+
+        background-color: $transparent-white;
+    }
 }
 
 .page-footer__menu-list {
     @include list-reset;
     text-align: center;
+}
 
+.page-footer__menu-item {
+    margin-bottom: 16px;
 }
 
 .page-footer__menu-link {
@@ -17,7 +42,7 @@
     &:hover,
     &:focus,
     &:active {
-        color: rgba(255, 255, 255, 0.7);
+        color: $white;
     }
 
     &--current:hover,
@@ -27,14 +52,64 @@
     }
 }
 
+.page-footer__social-wrapper {
+    width: 250px;
+    margin: 0 auto;
+}
+
 .page-footer__social-list {
     @include list-reset;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-footer__social-link {
+    display: block;
+    width: 25px;
+    height: 25px;
+
+    & svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    &:hover svg,
+    &:focus svg,
+    &:active svg {
+        fill: $white;
+
+        circle,
+        path {
+            fill: $burgundy;
+        }
+    }
+
+    &--wapp:hover svg,
+    &--wapp:focus svg,
+    &--wapp:active svg {
+        path:last-child {
+            fill: $burgundy;
+        }
+        path:first-child {
+            fill: $white;
+        }
+    }
 }
 
 @media (min-width: $tablet-width) {
     .page-footer {
-        padding: 40px 5.2%;
+        padding: 0 5.2% 40px;
     }
+
+    .page-footer__menu-wrapper {
+        padding-top: 39px;
+        margin-bottom: 40px;
+    }
+
+    .page-footer__menu-item {
+        margin-bottom: 22px;
+    }
+
     .page-footer__menu-link {
         font-size: 20px;
         line-height: 22px;
@@ -43,8 +118,27 @@
 
 @media (min-width: $desktop-width) {
     .page-footer {
-        padding: 30px 5.2%;
+        padding: 0 5.2% 30px;
     }
+
+    .page-footer__menu-wrapper {
+        padding-top: 23px;
+        margin-bottom: 26px;
+    }
+
+    .page-footer__menu-list {
+        width: 994px;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .page-footer__menu-item {
+        margin: 0;
+    }
+
     .page-footer__menu-link {
         font-size: 16px;
         line-height: 18px;

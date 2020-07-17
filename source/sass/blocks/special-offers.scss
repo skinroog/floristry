@@ -1,27 +1,123 @@
 .special-offers {
     padding: 0 5%;
+    width: 90%;
+    max-width: 420px;
 }
 
 .special-offers__title {
+    position: relative;
+
     @include heading-reset;
+    width: 70%;
+    margin-bottom: 40px;
 
     font-size: 20px;
     line-height: 34px;
     letter-spacing: 0.06em;
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+
+        display: block;
+        width: 85.5px;
+        height: 1px;
+
+        background-color: $white;
+    }
 }
 
 .special-offers__desc {
     margin: 0;
+    margin-bottom: 40px;
 
     font-size: 14px;
     line-height: 24px;
     text-transform: none;
 }
 
+.special-offers__picture {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
 @media (min-width: $tablet-width) {
+    .special-offers {
+        width: 59%;
+        max-width: 668px;
+
+        text-align: center;
+    }
+
     .special-offers__title {
+        width: 452px;
+        margin: 0 auto;
+        margin-bottom: 55px;
+
         font-size: 30px;
         line-height: 51px;
         text-align: center;
+
+        &::after {
+            left: 183px;
+            bottom: -15px;
+        }
+    }
+
+    .special-offers__desc {
+        margin-bottom: 15px;
+        padding: 0 18px;
+
+        text-align: center;
+    }
+
+    .special-offers__picture {
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .special-offers {
+        display: flex;
+        justify-content: space-between;
+        width: auto;
+        max-width: 1215px;
+
+        text-align: left;
+    }
+
+    .special-offers__title {
+        width: 220px;
+        margin-left: 0;
+        margin-bottom: 40px;
+
+        text-align: left;
+
+        &::after {
+            left: 0;
+         }
+    }
+
+    .special-offers__picture {
+        order: 2;
+        width: 697px;
+        margin: 0;
+    }
+
+    .special-offers__desc {
+        width: 353px;
+        padding: 0;
+        margin-bottom: 45px;
+
+        text-align: left;
+    }
+
+    .special-offers__text-wrapper {
+        margin-top: 65px;
+        width: 360px;
     }
 }

@@ -1,3 +1,96 @@
+.social-links {
+    width: 90.27%;
+    max-width: 300px;
+}
+
 .social-links__list {
     @include list-reset;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-links__link {
+    position: relative;
+
+    display: block;
+    width: 35px;
+    height: 35px;
+
+    background-color: $burgundy;
+    border-radius: 50%;
+
+    &:hover svg,
+    &:focus svg,
+    &:active svg {
+        fill: $white;
+
+        circle,
+        path {
+            fill: $burgundy;
+        }
+    }
+
+    &--wapp:hover svg,
+    &--wapp:focus svg,
+    &--wapp:active svg {
+        path:last-child {
+            fill: $burgundy;
+        }
+        path:first-child {
+            fill: $white;
+        }
+    }
+}
+
+.social-links__link svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+    margin-left: -9px;
+}
+
+@media (min-width: $tablet-width) {
+    .social-links {
+        width: 66.6%;
+        max-width: 500px;
+    }
+
+    .social-links__link {
+        width: 55px;
+        height: 55px;
+    }
+
+    .social-links__link svg {
+        width: 28.25px;
+        height: 28.25px;
+        margin-top: -14.125px;
+        margin-left: -14.125px;
+
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .social-links__list {
+        flex-direction: column;
+    }
+
+    .social-links__link {
+        width: 25px;
+        height: 25px;
+        margin-bottom: 24px;
+
+        background-color: transparent;
+    }
+
+    .social-links__link svg {
+        width: 28.25px;
+        height: 28.25px;
+        margin-top: -14.125px;
+        margin-left: -14.125px;
+
+    }
 }

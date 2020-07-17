@@ -1,3 +1,16 @@
+.page-main__intro {
+    margin-bottom: 100px;
+}
+
+.page-main__catalog {
+    margin-bottom: 85px;
+}
+
+.page-main__special-offers {
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
 @media (min-width: $tablet-width) {
     .page-main--inner__catalog-examples-wrapper {
         display: flex;
@@ -9,7 +22,21 @@
     }
 }
 
+@media (min-width: 1200px) {
+    .page-main__catalog {
+        margin-bottom: 160px;
+    }
+}
+
 @media (min-width: $desktop-width) {
+    .page-main__intro {
+        margin-bottom: 178px;
+    }
+
+    .page-main__catalog {
+        margin-bottom: 160px;
+    }
+
     .page-main--inner {
         display: flex;
     }

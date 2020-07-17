@@ -1,3 +1,10 @@
+.catalog-card {
+    position: relative;
+
+    max-width: 330px;
+    min-height: 392px;
+}
+
 .catalog-card__title {
     @include heading-reset;
 
@@ -7,9 +14,95 @@
     color: rgba(255, 255, 255, 0.9);
 }
 
+.catalog-card__caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
 .catalog-card__number {
+    position: absolute;
+    top: 23px;
+    left: 20px;
+    z-index: 100;
+
     font-size: 20px;
     line-height: 22px;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        top: 11px;
+        right: -80px;
+
+        display: block;
+        width: 70px;
+        height: 1px;
+
+        background-color: $white;
+    }
 }
+
+.catalog-card__picture {
+    display: block;
+    width: 100%;
+}
+
+.catalog-card__link {
+    display: none;
+}
+
+.catalog-card:hover .catalog-card__number {
+    left: 100px;
+
+    &::before {
+        left: -80px;
+    }
+}
+
+.catalog-card:hover .catalog-card__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.catalog-card:hover .catalog-card__title {
+    margin-bottom: 20px;
+}
+
+.catalog-card:hover .catalog-card__link{
+    display: inline-block;
+}
+
+
+@media (min-width: $tablet-width) {
+    .catalog-card__number {
+        top: 42px;
+
+        &::before {
+            right: -82px;
+        }
+    }
+
+    .catalog-card:hover .catalog-card__number {
+        &::before {
+            left: -82px;
+        }
+    }
+
+    .catalog-card:hover {
+        outline: $transparent-white solid 1px;
+        outline-offset: 10px;
+    }
+}
+
 
 

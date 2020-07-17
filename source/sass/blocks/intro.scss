@@ -1,13 +1,22 @@
 .intro {
-    padding: 0 5%;
-    height: 100vh;
+    position: relative;
 
-    background: url("../../img/main-background-mobile@1x.jpg") no-repeat 0 0;
+    padding: 10px 5%;
+    height: 100vh;
+    min-height: 530px;
+    max-height: 690px;
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: url("../../img/main-background-mobile@1x.jpg") no-repeat 0 64px;
     background-size: cover;
 }
 
 .intro__title {
     @include heading-reset;
+    width: 230px;
+    margin: 157px auto 35px;
 
     font-size: 30px;
     line-height: 42px;
@@ -15,21 +24,110 @@
     letter-spacing: 0.09em;
 }
 
+.intro__button {
+    margin-bottom: 70px;
+}
+
+.intro__social-links {
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
 .intro__arrow-down-text {
     display: none;
 }
 
+.intro__arrow-down {
+    position: absolute;
+    bottom: 54px;
+    left: 50%;
+
+    display: block;
+
+    &::after {
+        content: "";
+
+        position: absolute;
+
+        display: inline-block;
+        width: 14px;
+        height: 21px;
+        margin-left: -7px;
+
+        background: url("../../img/arrow.svg") no-repeat;
+    }
+
+    &:hover::after {
+        top: 5px;
+    }
+
+}
+
 @media (min-width: $tablet-width) {
+    .intro {
+        min-height: 1000px;
+        max-height: 1500px;
+
+        background-position: 0 0;
+    }
+
     .intro__title {
+        width: 580px;
+        margin-top: 327px;
+        margin-bottom: 78px;
+
         font-size: 70px;
         line-height: 77px;
+    }
+
+    .intro__button {
+        margin-bottom: 211px;
+    }
+
+    .intro__social-links {
+        margin-bottom: 35px;
+    }
+
+    .intro__arrow-down::after {
+        width: 28px;
+        height: 44px;
+        margin-left: -14px;
+
+        background-size: contain;
     }
 }
 
 @media (min-width: $desktop-width) {
+    .intro {
+        min-height: 850px;
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            display: block;
+            width: 100%;
+            height: 75px;
+
+            background-image: linear-gradient(0deg, #3B181E 3.33%, rgba(59, 24, 30, 0) 100%);
+        }
+    }
+
     .intro__title {
+        width: 820px;
+        margin-top: 313px;
+        margin-bottom: 74px;
+
         font-size: 120px;
         line-height: 132px;
+    }
+
+    .intro__social-links {
+        position: absolute;
+        bottom: 47px;
     }
 
     .intro__arrow-down-text {
@@ -40,6 +138,60 @@
         letter-spacing: 0.06em;
         color: $white;
         text-transform: lowercase;
+        writing-mode: vertical-lr;
+    }
+
+    .intro__arrow-down {
+        bottom: 274px;
+        left: auto;
+        right: 5%;
+
+        &::after {
+            top: 192px;
+            left: 0;
+
+            width: 14px;
+            height: 21px;
+            margin-left: 0;
+        }
+
+        &:hover::after {
+            top: 200px;
+        }
+    }
+
+    .intro__mouse {
+        position: absolute;
+        left: 50%;
+        bottom: 20px;
+        z-index: 2;
+
+        width: 36px;
+        height: 56px;
+        margin-left: -18px;
+
+        background: url("../../img/scroll-mouse.svg") 0 0 no-repeat;
+        background-size: contain;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            top: 9.46px;
+            left: 17px;
+
+            display: block;
+            width: 0.7px;
+            height: 9.46px;
+
+            background-color: $white;
+        }
+
+        &:hover::after {
+            top: 19.46px;
+        }
+
     }
 
 }

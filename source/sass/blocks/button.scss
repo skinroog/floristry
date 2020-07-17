@@ -1,15 +1,21 @@
 .button {
+    display: inline-block;
+    padding: 16px 37px;
+
     font-size: 10px;
     line-height: 11px;
     text-align: center;
     letter-spacing: 0.15em;
+    text-transform: uppercase;
     color: $white;
 
     background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid $white;
     outline: none;
+    cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:focus {
         color: $black;
 
         background-color: $white;
@@ -20,6 +26,11 @@
     }
 
     &--black {
+        padding: 19px 36px;
+
+        font-size: 11px;
+        line-height: 12px;
+
         background-color: $black;
         border: none;
     }
@@ -29,15 +40,33 @@
 
 @media (min-width: $tablet-width) {
     .button {
+        padding: 20px 51px;
+
         font-size: 15px;
         line-height: 17px;
+
+        &--black {
+            padding: 17px 36px 16px;
+
+            font-size: 11px;
+            line-height: 12px;
+        }
     }
 }
 
 @media (min-width: $desktop-width) {
     .button {
+        padding: 16px 37px;
+
         font-size: 12px;
         line-height: 13px;
+
+        &--black {
+            padding: 17px 36px 16px;
+
+            font-size: 11px;
+            line-height: 12px;
+        }
     }
 
 }

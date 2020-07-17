@@ -1,10 +1,12 @@
 .catalog {
     padding: 0 5%;
-
 }
 
 .catalog__title {
     @include heading-reset;
+    width: 288px;
+    margin: 0 auto;
+    margin-bottom: 27px;
 
     font-size: 20px;
     line-height: 34px;
@@ -15,6 +17,9 @@
     @include list-reset;
 }
 
+.catalog__item {
+    margin: 0 auto;
+}
 
 @media (min-width: $tablet-width) {
     .catalog {
@@ -22,14 +27,40 @@
     }
 
     .catalog__title {
+        position: relative;
+
+        width: 230px;
+        margin-bottom: 52px;
+
         font-size: 30px;
         line-height: 33px;
         text-align: center;
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            left: 59px;
+            bottom: -22px;
+
+            display: block;
+            width: 85.5px;
+            height: 1px;
+
+            background-color: $white;
+        }
     }
 }
 
 @media (min-width: $desktop-width) {
     .catalog {
         padding: 0 1.3%;
+
+        background: url("../../img/catalog-background.svg") 50% 50px no-repeat;
+        background-size: contain;
+    }
+
+    .catalog__title {
+        margin-bottom: 120px;
     }
 }

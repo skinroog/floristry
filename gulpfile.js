@@ -137,6 +137,7 @@ function watchFiles() {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.js], js);
+    gulp.watch([path.watch.img], img);
 }
 
 function clean() {
@@ -149,8 +150,5 @@ let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.watch = watch;
 exports.default = watch;
-
-exports.css = css;
-
 
 
