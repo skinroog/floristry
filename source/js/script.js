@@ -1,12 +1,5 @@
-let nav = document.querySelector('.main-nav');
-let navToggle = document.querySelector('.main-nav__toggle');
+@@include('modal.js')
+@@include('nav.js')
 
-navToggle.addEventListener('click', function () {
-    if (nav.classList.contains('main-nav--closed')) {
-        nav.classList.remove('main-nav--closed');
-        nav.classList.add('main-nav--opened');
-    } else {
-        nav.classList.remove('main-nav--opened');
-        nav.classList.add('main-nav--closed');
-    }
-});
+
+
