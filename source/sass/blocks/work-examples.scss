@@ -2,13 +2,28 @@
     padding: 0 6.3%;
 }
 
+.work-examples__list {
+    @include list-reset;
+}
+
 .work-examples__more-link {
     display: none;
 }
 
+.work-examples__picture {
+    width: 75px;
+    height: 75px;
+}
+
+
 @media (min-width: $tablet-width) {
     .work-examples {
         padding: 0 7.8%;
+    }
+
+    .work-examples__picture {
+        width: 145px;
+        height: 145px;
     }
 }
 
@@ -27,5 +42,33 @@
             color: $white;
         }
 
+        &::after {
+            content: "";
+
+            position: absolute;
+            right: -29px;
+            top: 5.5px;
+
+            display: block;
+            width: 16px;
+            height: 16px;
+
+            background: url("../../img/inst-icon.svg") 0 0 no-repeat;
+            cursor: pointer;
+            opacity: 0.5;
+        }
+
+        &:hover::after,
+        &:focus::after,
+        &:active::after {
+            opacity: 1;
+        }
+    }
+
+    .work-examples__more {
+        position: absolute;
+        right: 140px;
+        bottom: 45px;
+        margin: 0;
     }
 }

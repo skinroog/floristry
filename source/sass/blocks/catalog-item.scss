@@ -4,6 +4,9 @@
 
 .catalog-item__title {
     @include heading-reset;
+    width: 65%;
+    margin-bottom: 32px;
+
     font-size: 20px;
     line-height: 22px;
     letter-spacing: 0.09em;
@@ -11,6 +14,7 @@
 
 .catalog-item__desc {
     margin: 0;
+    margin-bottom: 30px;
 
     font-size: 18px;
     line-height: 22px;
@@ -33,7 +37,12 @@
     }
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $desktop-width-small) {
+    .catalog-item {
+        padding-top: 253px;
+        padding-left: 12.34%;
+        padding-right: 27.49%;
+    }
     .catalog-item__title {
         font-size: 50px;
         line-height: 55px;

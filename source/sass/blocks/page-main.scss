@@ -31,24 +31,63 @@
     background-color: rgba(6, 6, 6, 0.7);
 }
 
+.page-main--inner {
+    padding-top: 64px;
+    padding-bottom: 45px;
+}
+
+.page-main--inner__item-picture {
+    margin: 0;
+    margin-bottom: 32px;
+}
+
+.page-main--inner__item-picture-img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    max-height: 518px;
+}
+
+.page-main--inner__catalog-item {
+    margin-bottom: 50px;
+}
+
 @media (min-width: $tablet-width) {
-    .page-main--inner__catalog-examples-wrapper {
+    .page-main--inner {
+        padding-bottom: 20px;
+    }
+
+    .page-main--inner__catalog-items-wrapper {
         display: flex;
         flex-direction: column;
+        padding-top: 30px;
+        width: 87%;
+        max-width: 950px;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .page-main--inner__catalog-item {
         order: 5;
     }
+
+    .page-main--inner__work-examples {
+        margin-bottom: 70px;
+    }
+
+    .page-main--inner {
+        padding-top: 112px;
+    }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $desktop-width-small) {
     .page-main__catalog {
         margin-bottom: 160px;
     }
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $desktop-width-small) {
     .page-main__intro {
         margin-bottom: 178px;
     }
@@ -58,11 +97,49 @@
     }
 
     .page-main--inner {
+        position: relative;
+
+        padding: 0;
         display: flex;
+    }
+
+    .page-main--inner__item-picture {
+        position: relative;
+
+        width: 52%;
+        max-width: 996px;
+        margin-bottom: 0;
+        display: flex;
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            top: 30px;
+            left: 30px;
+
+            display: block;
+            width: 100%;
+            height: calc(100% - 65px);
+
+            border: 1px solid $transparent-white;
+        }
+    }
+
+    .page-main--inner__catalog-items-wrapper {
+        padding: 0;
+    }
+
+    .page-main--inner__item-picture-img {
+        max-height: 100%;
     }
 
     .page-main--inner__catalog-item {
         order: 0;
+    }
+
+    .page-main--inner + .page-footer {
+        display: none;
     }
 }
 

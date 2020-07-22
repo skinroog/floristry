@@ -73,7 +73,7 @@
     }
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $desktop-width-small) {
     .social-links__list {
         flex-direction: column;
     }

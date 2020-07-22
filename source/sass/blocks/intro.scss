@@ -97,9 +97,10 @@
     }
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $desktop-width-small) {
     .intro {
-        min-height: 850px;
+        min-height: 750px;
+        max-height: 1300px;
 
         &::after {
             content: "";
@@ -118,7 +119,7 @@
 
     .intro__title {
         width: 820px;
-        margin-top: 313px;
+        margin-top: 210px;
         margin-bottom: 74px;
 
         font-size: 120px;
@@ -194,5 +195,15 @@
 
     }
 
+}
+
+@media (min-width: $desktop-width) {
+    .intro {
+        min-height: 850px;
+    }
+
+    .intro__title {
+        margin-top: 313px;
+    }
 }
 
