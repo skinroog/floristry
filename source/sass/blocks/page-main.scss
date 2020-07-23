@@ -52,6 +52,11 @@
     margin-bottom: 50px;
 }
 
+.page-main--inner__item-picture-wrapper {
+    display: flex;
+    width: 100%;
+}
+
 @media (min-width: $tablet-width) {
     .page-main--inner {
         padding-bottom: 20px;
@@ -107,7 +112,7 @@
         position: relative;
 
         width: 52%;
-        max-width: 996px;
+        // max-width: 996px;
         margin-bottom: 0;
         display: flex;
 

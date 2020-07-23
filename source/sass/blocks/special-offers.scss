@@ -80,7 +80,7 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $desktop-width-small) {
     .special-offers {
         display: flex;
         justify-content: space-between;

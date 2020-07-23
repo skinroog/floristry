@@ -25,7 +25,10 @@
             </nav>
 
             <a class="page-header__logo">
-                <img class="page-header__logo-picture" width="96" height="29" src="img/logo-mobile.svg" alt="Логотип интернет-магазина Весна всегда">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                    <img class="page-header__logo-picture" width="96" height="29" src="img/logo-mobile.svg" alt="Логотип интернет-магазина Весна всегда">
+                </picture>
             </a>
 
         </header>
@@ -94,50 +97,72 @@
 
                 <ul class="catalog__list">
                     <li class="catalog__item catalog-card">
+
                         <div class="catalog-card__caption">
                             <h3 class="catalog-card__title">Букет невесты и свадебное оформление</h3>
                             <a class="catalog-card__link button" href="weddings.html">Смотреть работы</a>
                         </div>
                         <span class="catalog-card__number">01</span>
-                        <img class="catalog-card__picture catalog-card__picture--weddings" src="img/catalog-slider-weddings@1x.jpg" alt="Букет невесты">
+                        <picture>
+                            <source type="image/webp" srcset="img/catalog-slider-weddings@1x.webp 1x, img/catalog-slider-weddings@2x.webp 2x">
+                            <img class="catalog-card__picture catalog-card__picture--weddings" src="img/catalog-slider-weddings@1x.jpg" srcset="img/catalog-slider-weddings@1x.jpg 1x, img/catalog-slider-weddings@2x.jpg 2x" alt="Букет невесты">
+                        </picture>
                         <div class="catalog-card__overlay"></div>
                     </li>
+
                     <li class="catalog__item catalog-card">
                         <div class="catalog-card__caption">
                             <h3 class="catalog-card__title">Букеты на торжества</h3>
                             <a class="catalog-card__link button" href="bouquets.html">Смотреть работы</a>
                         </div>
                         <span class="catalog-card__number">02</span>
-                        <img class="catalog-card__picture catalog-card__picture--bouquets" src="img/catalog-slider-bouquets@1x.jpg" alt="Букет на торжество">
+                        <picture>
+                            <source type="image/webp" srcset="img/catalog-slider-bouquets@1x.webp 1x, img/catalog-slider-bouquets@2x.webp 2x">
+                            <img class="catalog-card__picture catalog-card__picture--bouquets" src="img/catalog-slider-bouquets@1x.jpg" srcset="img/catalog-slider-bouquets@1x.jpg 1x, img/catalog-slider-bouquets@2x.jpg 2x" alt="Букет на торжество">
+                        </picture>
                         <div class="catalog-card__overlay"></div>
                     </li>
+
                     <li class="catalog__item catalog-card">
                         <div class="catalog-card__caption">
                             <h3 class="catalog-card__title">Композиции</h3>
                             <a class="catalog-card__link button" href="composition.html">Смотреть работы</a>
                         </div>
                         <span class="catalog-card__number">03</span>
-                        <img class="catalog-card__picture catalog-card__picture--composition" src="img/catalog-slider-composition@1x.jpg" alt="Композиция">
+                        <picture>
+                            <source type="image/webp" srcset="img/catalog-slider-composition@1x.webp 1x, img/catalog-slider-composition@2x.webp 2x">
+                            <img class="catalog-card__picture catalog-card__picture--composition" src="img/catalog-slider-composition@1x.jpg" srcset="img/catalog-slider-composition@1x.jpg 1x, img/catalog-slider-composition@2x.jpg 2x" alt="Композиция">
+                        </picture>
                         <div class="catalog-card__overlay"></div>
                     </li>
+
                     <li class="catalog__item catalog-card">
                         <div class="catalog-card__caption">
                             <h3 class="catalog-card__title">Оформление мероприятий</h3>
                             <a class="catalog-card__link button" href="events.html">Смотреть работы</a>
                         </div>
                         <span class="catalog-card__number">04</span>
-                        <img class="catalog-card__picture catalog-card__picture--events" src="img/catalog-slider-events@1x.jpg" alt="Оформление мероприятия">
+                        <picture>
+                            <source type="image/webp" srcset="img/catalog-slider-events@1x.webp 1x, img/catalog-slider-events@2x.webp 2x">
+                            <img class="catalog-card__picture catalog-card__picture--events" src="img/catalog-slider-events@1x.jpg"  srcset="img/catalog-slider-events@1x.jpg 1x, img/catalog-slider-events@2x.jpg 2x" alt="Оформление мероприятия">
+                        </picture>
                         <div class="catalog-card__overlay"></div>
                     </li>
                 </ul>
 
-                <div class="catalog__slider-controls">
-                </div>
+                <div class="catalog__slider-controls"></div>
 
             </section>
 
             <section class="special-offers page-main__special-offers">
-                <img class="special-offers__picture" src="img/special-offers-mobile@1x.jpg" alt="Свадебное оформление">
+                <picture>
+                    <source media="(min-width: 1280px)" type="image/webp" srcset="img/special-offers-desktop@1x.webp 1x, img/special-offers-desktop@2x.webp 2x">
+                    <source media="(min-width: 1280px)" srcset="img/special-offers-desktop@1x.jpg 1x, img/special-offers-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/special-offers-tablet@1x.webp 1x, img/special-offers-tablet@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/special-offers-tablet@1x.jpg 1x, img/special-offers-tablet@2x.jpg 2x">
+                    <source type="image/webp" srcset="img/special-offers-mobile@1x.webp 1x, img/special-offers-mobile@2x.webp 2x">
+                    <img class="special-offers__picture" src="img/special-offers-mobile@1x.jpg" srcset="img/special-offers-mobile@1x.jpg 1x, img/special-offers-mobile@2x.jpg 2x" alt="Свадебное оформление">
+                </picture>
                 <div class="special-offers__text-wrapper">
                     <h2 class="special-offers__title">Акционные предложения</h2>
                     <p class="special-offers__desc">При заказе свадебного оформления предоставляется скидка на букет невесты и бутоньерку в&nbsp;размере&nbsp;30%</p>
