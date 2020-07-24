@@ -1080,31 +1080,16 @@ template {
   border-radius: 50%;
 }
 
+.social-links__link svg {
+  fill: none;
+  color: white;
+}
+
 .social-links__link:hover svg,
 .social-links__link:focus svg,
 .social-links__link:active svg {
   fill: #FFFFFF;
-}
-
-.social-links__link:hover svg circle,
-.social-links__link:hover svg path,
-.social-links__link:focus svg circle,
-.social-links__link:focus svg path,
-.social-links__link:active svg circle,
-.social-links__link:active svg path {
-  fill: #3B181E;
-}
-
-.social-links__link--wapp:hover svg path:last-child,
-.social-links__link--wapp:focus svg path:last-child,
-.social-links__link--wapp:active svg path:last-child {
-  fill: #3B181E;
-}
-
-.social-links__link--wapp:hover svg path:first-child,
-.social-links__link--wapp:focus svg path:first-child,
-.social-links__link--wapp:active svg path:first-child {
-  fill: #FFFFFF;
+  color: #3B181E;
 }
 
 .social-links__link svg {
@@ -1490,35 +1475,15 @@ template {
 }
 
 .page-footer__social-link svg {
-  width: 25px;
-  height: 25px;
+  fill: none;
+  color: white;
 }
 
 .page-footer__social-link:hover svg,
 .page-footer__social-link:focus svg,
 .page-footer__social-link:active svg {
   fill: #FFFFFF;
-}
-
-.page-footer__social-link:hover svg circle,
-.page-footer__social-link:hover svg path,
-.page-footer__social-link:focus svg circle,
-.page-footer__social-link:focus svg path,
-.page-footer__social-link:active svg circle,
-.page-footer__social-link:active svg path {
-  fill: #3B181E;
-}
-
-.page-footer__social-link--wapp:hover svg path:last-child,
-.page-footer__social-link--wapp:focus svg path:last-child,
-.page-footer__social-link--wapp:active svg path:last-child {
-  fill: #3B181E;
-}
-
-.page-footer__social-link--wapp:hover svg path:first-child,
-.page-footer__social-link--wapp:focus svg path:first-child,
-.page-footer__social-link--wapp:active svg path:first-child {
-  fill: #FFFFFF;
+  color: #3B181E;
 }
 
 @media (min-width: 768px) {

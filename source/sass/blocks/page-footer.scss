@@ -69,30 +69,15 @@
     height: 25px;
 
     & svg {
-        width: 25px;
-        height: 25px;
+        fill: none;
+        color: white;
     }
 
     &:hover svg,
     &:focus svg,
     &:active svg {
         fill: $white;
-
-        circle,
-        path {
-            fill: $burgundy;
-        }
-    }
-
-    &--wapp:hover svg,
-    &--wapp:focus svg,
-    &--wapp:active svg {
-        path:last-child {
-            fill: $burgundy;
-        }
-        path:first-child {
-            fill: $white;
-        }
+        color:  $burgundy;
     }
 }
 
