@@ -1,0 +1,94 @@
+.catalog-slider .owl-dots {
+    width: 288px;
+    margin: 0 auto;
+    padding: 9px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.catalog-slider.owl-carousel button.owl-dot {
+    width: 63px;
+    height: 3px;
+
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+
+    &:focus {
+        outline: none;
+        background: $white;
+    }
+}
+
+.catalog-slider.owl-carousel button.owl-dot.active {
+    background: $white;
+}
+
+.work-examples-slider .owl-dots {
+    display: none;
+}
+
+.owl-item {
+    margin-right: 15px;
+}
+
+.owl-item:nth-child(4n) {
+    margin-right: 0;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    top: 39px;
+    right: -23px;
+
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid $white;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    outline: none;
+
+    span {
+        display: none;
+    }
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        top: 17px;
+        left: 20px;
+
+        display: block;
+        width: 6px;
+        height: 10px;
+
+        background: url("../img/slider-next.svg") 0 0 no-repeat;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    display: none;
+}
+
+
+@media (min-width: $tablet-width) {
+    .catalog-slider .owl-dots {
+        width: 137px;
+        padding-top: 19px;
+
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .work-examples-slider {
+        position: relative;
+    }
+}

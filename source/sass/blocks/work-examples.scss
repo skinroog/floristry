@@ -4,13 +4,20 @@
 
 .work-examples__list {
     @include list-reset;
+    max-width: 355px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.work-examples__more {
+    margin: 0;
 }
 
 .work-examples__more-link {
     display: none;
 }
 
-.work-examples__picture {
+.work-examples__item {
     width: 75px;
     height: 75px;
 }
@@ -18,16 +25,26 @@
 
 @media (min-width: $tablet-width) {
     .work-examples {
-        padding: 0 7.8%;
+        padding: 0;
+        width: 649px;
     }
 
-    .work-examples__picture {
+    .work-examples__list {
+        max-width: 649px;
+    }
+
+    .work-examples__item {
         width: 145px;
         height: 145px;
     }
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $desktop-width-small) {
+    .work-examples {
+
+        width: 556px;
+    }
+
     .work-examples__more-link {
         display: inline;
 
@@ -70,5 +87,10 @@
         right: 140px;
         bottom: 45px;
         margin: 0;
+    }
+
+    .work-examples__item {
+        width: 123px;
+        height: 123px;
     }
 }
