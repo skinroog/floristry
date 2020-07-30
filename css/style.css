@@ -26,6 +26,54 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+@-webkit-keyframes arrow-down-mobile {
+  0%, 100% {
+    top: 0px;
+  }
+  25%, 75% {
+    top: 3px;
+  }
+  50% {
+    top: 6px;
+  }
+}
+
+@keyframes arrow-down-mobile {
+  0%, 100% {
+    top: 0px;
+  }
+  25%, 75% {
+    top: 3px;
+  }
+  50% {
+    top: 6px;
+  }
+}
+
+@-webkit-keyframes arrow-down-desktop {
+  0%, 100% {
+    top: 192px;
+  }
+  25%, 75% {
+    top: 196px;
+  }
+  50% {
+    top: 200px;
+  }
+}
+
+@keyframes arrow-down-desktop {
+  0%, 100% {
+    top: 192px;
+  }
+  25%, 75% {
+    top: 196px;
+  }
+  50% {
+    top: 200px;
+  }
+}
+
 body {
   min-width: 320px;
   font-family: "Forum", "Book Antiqua", serif;
@@ -399,6 +447,9 @@ template {
   border: 1px solid #FFFFFF;
   outline: none;
   cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+       -o-transition-duration: 0.4s;
+          transition-duration: 0.4s;
 }
 
 .button:hover, .button:focus {
@@ -575,10 +626,20 @@ template {
 
 .main-nav__toggle::before {
   top: 0;
+  -webkit-transition: width 0.2s linear 0.2s, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+  transition: width 0.2s linear 0.2s, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+  -o-transition: transform 0.2s ease-in, width 0.2s linear 0.2s, top 0.2s linear 0.2s;
+  transition: transform 0.2s ease-in, width 0.2s linear 0.2s, top 0.2s linear 0.2s;
+  transition: transform 0.2s ease-in, width 0.2s linear 0.2s, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
 }
 
 .main-nav__toggle::after {
   bottom: 0;
+  -webkit-transition: width 0.2s linear 0.2s, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+  transition: width 0.2s linear 0.2s, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+  -o-transition: transform 0.2s ease-in, width 0.2s linear 0.2s, top 0.2s linear 0.2s;
+  transition: transform 0.2s ease-in, width 0.2s linear 0.2s, top 0.2s linear 0.2s;
+  transition: transform 0.2s ease-in, width 0.2s linear 0.2s, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
 }
 
 .main-nav__toggle-text {
@@ -605,6 +666,11 @@ template {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+  -webkit-transition: width 0.2s linear, top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+  transition: width 0.2s linear, top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+  -o-transition: width 0.2s linear, top 0.2s linear, transform 0.2s ease-in 0.2s;
+  transition: width 0.2s linear, top 0.2s linear, transform 0.2s ease-in 0.2s;
+  transition: width 0.2s linear, top 0.2s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
 }
 
 .main-nav--opened .main-nav__toggle::after {
@@ -613,6 +679,11 @@ template {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  -webkit-transition: width 0.2s linear, top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+  transition: width 0.2s linear, top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+  -o-transition: width 0.2s linear, top 0.2s linear, transform 0.2s ease-in 0.2s;
+  transition: width 0.2s linear, top 0.2s linear, transform 0.2s ease-in 0.2s;
+  transition: width 0.2s linear, top 0.2s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
 }
 
 .main-nav--closed .main-nav__list {
@@ -910,20 +981,25 @@ template {
 .intro__arrow-down::after {
   content: "";
   position: absolute;
+  top: 0px;
   display: inline-block;
   width: 14px;
   height: 21px;
   margin-left: -7px;
   background: url("../../img/arrow.svg") no-repeat;
-}
-
-.intro__arrow-down:hover::after {
-  top: 5px;
+  -webkit-animation-name: arrow-down-mobile;
+          animation-name: arrow-down-mobile;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 @media (min-width: 768px) {
   .intro {
-    min-height: 1000px;
+    min-height: 1024px;
     max-height: 1500px;
     background-image: url("../../img/main-background-tablet@1x.jpg");
     background-position: 0 0;
@@ -949,6 +1025,9 @@ template {
   }
   .intro__social-links {
     margin-bottom: 35px;
+  }
+  .intro__arrow-down {
+    bottom: 95px;
   }
   .intro__arrow-down::after {
     width: 28px;
@@ -1018,6 +1097,8 @@ template {
     width: 14px;
     height: 21px;
     margin-left: 0;
+    -webkit-animation-name: arrow-down-desktop;
+            animation-name: arrow-down-desktop;
   }
   .intro__arrow-down:hover::after {
     top: 200px;
@@ -1087,6 +1168,9 @@ template {
 .social-links__link svg {
   fill: none;
   color: white;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 .social-links__link:hover svg,
@@ -1153,7 +1237,7 @@ template {
   font-weight: normal;
   width: 288px;
   margin: 0 auto;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   font-size: 20px;
   line-height: 34px;
   letter-spacing: 0.06em;
@@ -1168,7 +1252,7 @@ template {
 }
 
 .catalog__item {
-  margin: 11px auto;
+  margin: 12px auto;
 }
 
 @media (min-width: 768px) {
@@ -1178,7 +1262,7 @@ template {
   .catalog__title {
     position: relative;
     width: 230px;
-    margin-bottom: 41px;
+    margin-bottom: 40px;
     font-size: 30px;
     line-height: 33px;
     text-align: center;
@@ -1205,7 +1289,7 @@ template {
     background-size: contain;
   }
   .catalog__title {
-    margin-bottom: 109px;
+    margin-bottom: 108px;
   }
   .catalog__list {
     max-width: 1520px;
@@ -1241,6 +1325,9 @@ template {
   z-index: 10;
   font-size: 20px;
   line-height: 22px;
+  -webkit-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .catalog-card__number::before {
@@ -1252,6 +1339,13 @@ template {
   width: 70px;
   height: 1px;
   background-color: #FFFFFF;
+}
+
+.catalog-card__overlay {
+  background-color: transparent;
+  -webkit-transition-duration: 0.7s;
+       -o-transition-duration: 0.7s;
+          transition-duration: 0.7s;
 }
 
 .catalog-card__picture {
