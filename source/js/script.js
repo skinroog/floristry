@@ -6,4 +6,5 @@
 // Custom scripts
 @@include('modal.js')
 @@include('nav.js')
+@@include('scroll.js')
 @@include('carousel.js')

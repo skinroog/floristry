@@ -14,6 +14,8 @@
     outline: none;
     cursor: pointer;
 
+    transition-duration: 0.4s;
+
     &:hover,
     &:focus {
         color: $black;

@@ -22,6 +22,8 @@
     & svg {
         fill: none;
         color: white;
+
+        transition-duration: 0.2s;
     }
 
     &:hover svg,

@@ -91,10 +91,14 @@
 
     &::before {
         top: 0;
+
+        transition: transform 0.2s ease-in, width 0.2s linear 0.2s, top 0.2s linear 0.2s;
     }
 
     &::after {
         bottom: 0;
+
+        transition: transform 0.2s ease-in, width 0.2s linear 0.2s, top 0.2s linear 0.2s;
     }
 }
 
@@ -124,6 +128,8 @@
         width: 30px;
 
         transform: rotate(45deg);
+
+        transition: width 0.2s linear, top 0.2s linear, transform 0.2s ease-in 0.2s;
     }
 
     &::after {
@@ -132,6 +138,8 @@
         width: 30px;
 
         transform: rotate(-45deg);
+
+        transition: width 0.2s linear, top 0.2s linear, transform 0.2s ease-in 0.2s;
     }
 }
 

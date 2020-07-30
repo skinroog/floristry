@@ -30,6 +30,8 @@
     font-size: 20px;
     line-height: 22px;
 
+    transition-duration: 0.5s;
+
     &::before {
         content: "";
 
@@ -43,6 +45,12 @@
 
         background-color: $white;
     }
+}
+
+.catalog-card__overlay {
+    background-color: transparent;
+
+    transition-duration: 0.7s;
 }
 
 .catalog-card__picture {

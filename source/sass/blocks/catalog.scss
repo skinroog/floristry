@@ -6,7 +6,7 @@
     @include heading-reset;
     width: 288px;
     margin: 0 auto;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 
     font-size: 20px;
     line-height: 34px;
@@ -20,7 +20,7 @@
 }
 
 .catalog__item {
-    margin: 11px auto;
+    margin: 12px auto;
 }
 
 @media (min-width: $tablet-width) {
@@ -32,7 +32,7 @@
         position: relative;
 
         width: 230px;
-        margin-bottom: 41px;
+        margin-bottom: 40px;
 
         font-size: 30px;
         line-height: 33px;
@@ -67,7 +67,7 @@
     }
 
     .catalog__title {
-        margin-bottom: 109px;
+        margin-bottom: 108px;
     }
 
     .catalog__list {

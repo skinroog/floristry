@@ -28,3 +28,17 @@ input[type="radio"].visually-hidden {
 .no-scroll {
     overflow: hidden;
 }
+
+
+@keyframes arrow-down-mobile {
+    0%, 100% { top: 0px; }
+    25%, 75% { top: 3px; }
+    50%  {top: 6px; }
+}
+
+@keyframes arrow-down-desktop {
+    0%, 100% { top: 192px; }
+    25%, 75% { top: 196px; }
+    50%  {top: 200px; }
+}
+
