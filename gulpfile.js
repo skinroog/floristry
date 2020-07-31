@@ -6,7 +6,7 @@ let path = {
         html: source_folder + '/*.html',
         sass: source_folder + '/sass/style.scss',
         js: source_folder + '/js/script.js',
-        img: source_folder + '/img/**/*.{jpg,png,svg,ico}',
+        img: source_folder + '/img/*.{jpg,png,svg,ico}',
         fonts: source_folder + '/fonts/*'
     },
     build: {
@@ -147,7 +147,7 @@ let build = gulp.series(clean, gulp.parallel(html, css, js, img, fonts));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 
-exports.watch = watch;
+exports.build = build;
 exports.default = watch;
 
 
