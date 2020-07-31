@@ -1,16 +1,21 @@
 let anchors = [document.querySelector('.intro__button'), document.querySelector('.intro__arrow-down')];
 
-anchors.forEach(anchor => {
+if (!anchors.includes(null)) {
 
-    anchor.addEventListener('click', function (event) {
-        event.preventDefault();
+    anchors.forEach(anchor => {
 
-        let goal = anchor.getAttribute('href');
+        anchor.addEventListener('click', function (event) {
+            event.preventDefault();
 
-        document.querySelector(goal).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+            let goal = anchor.getAttribute('href');
+
+            document.querySelector(goal).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         });
+
     });
 
-});
+}
+

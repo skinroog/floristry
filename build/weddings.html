@@ -9,10 +9,11 @@
     <body>
         <header class="page-header">
 
-            <nav class="main-nav main-nav--closed">
+            <nav class="main-nav">
                 <p class="main-nav__toggle-wrapper">
-                    <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть/закрыть меню</span></button>
-                    <span class="main-nav__toggle-text">Меню</span>
+                    <button class="main-nav__toggle" type="button">
+                        <span class="main-nav__toggle-text">Меню</span>
+                    </button>
                 </p>
                 <ul class="main-nav__list">
                     <li class="main-nav__item"><a class="main-nav__link main-nav__link--current">Свадебная флористика</a></li>
@@ -24,7 +25,10 @@
             </nav>
 
             <a class="page-header__logo" href="index.html">
-                <img class="page-header__logo-picture" width="96" height="29" src="img/logo-mobile.svg" alt="Логотип интернет-магазина Весна всегда">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                    <img class="page-header__logo-picture" width="96" height="29" src="img/logo-mobile.svg" alt="Логотип интернет-магазина Весна всегда">
+                </picture>
             </a>
 
         </header>
@@ -45,7 +49,7 @@
                 <section class="catalog-item page-main--inner__catalog-item">
                     <h1 class="catalog-item__title">Букеты невесты и свадебное оформление</h1>
                     <p class="catalog-item__desc">Свадьба–самое важное событие в жизни молодожен. Поэтому каждый из будущих супругов хочет, чтобы на торжестве все было идеально. Наша компания превзойдет ваши ожидания по красоте, качеству и лояльному ценнику. Обращаясь к нам, вы можете не переживать за оформление вашей свадьбы.</p>
-                    <button class="catalog-item__button-order button button--transparent" type="button">Заказать</button>
+                    <button class="catalog-item__button-order button-order button button--transparent" type="button">Заказать</button>
                 </section>
 
                 <section class="work-examples page-main--inner__work-examples">
@@ -123,6 +127,25 @@
             </div>
 
         </footer>
+
+        <div class="page-main__modal-overlay">
+            <section class="modal page-main__modal">
+                <h2 class="modal__title">Оставьте свой номер и мы вам перезвоним!</h2>
+                <button class="modal__button-close"><span class="visually-hidden">Закрыть</span></button>
+                <form class="modal__form" action="https://echo.htmlacademy.ru" method="POST">
+                    <p class="modal__form-field">
+                        <label class="visually-hidden" for="name">Имя</label>
+                        <input class="modal__form-input" type="text" name="name" id="name" placeholder="Имя" required>
+                    </p>
+                    <p class="modal__form-field">
+                        <label class="visually-hidden" for="tel">Телефон</label>
+                        <input class="modal__form-input" type="tel" name="tel" id="tel" placeholder="Телефон" required>
+                    </p>
+                    <button class="modal__form-button button" type="submit">Позвоните мне</button>
+                </form>
+            </section>
+        </div>
+
 
         <script src="js/script.min.js"></script>
 

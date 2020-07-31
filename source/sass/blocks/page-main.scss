@@ -24,11 +24,14 @@
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
     overflow: auto;
 
     background-color: rgba(6, 6, 6, 0.7);
+}
+
+.page-main__modal {
+    margin: auto;
 }
 
 .page-main--inner {

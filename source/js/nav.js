@@ -1,12 +1,10 @@
 let nav = document.querySelector('.main-nav');
+let header = document.querySelector('.page-header');
 let navToggle = document.querySelector('.main-nav__toggle');
 
 navToggle.addEventListener('click', function () {
-    if (nav.classList.contains('main-nav--closed')) {
-        nav.classList.remove('main-nav--closed');
-        nav.classList.add('main-nav--opened');
-    } else {
-        nav.classList.remove('main-nav--opened');
-        nav.classList.add('main-nav--closed');
-    }
+    nav.classList.toggle('main-nav--opened');
+    header.classList.toggle('page-header--open-nav');
+    document.body.classList.toggle('no-scroll');
 });
+
