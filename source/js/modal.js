@@ -10,7 +10,8 @@ buttonOrder.onclick = function () {
     document.body.classList.add('no-scroll');
 
     let scrollbarWidth = getScrollbarWidth();
-    document.body.style.paddingRight = scrollbarWidth + 'px';
+
+    document.body.style.paddingRight = scrollbarWidth + 8 + 'px';
 };
 
 function getScrollbarWidth() {
@@ -19,7 +20,7 @@ function getScrollbarWidth() {
     elem.style.height = '100px';
     elem.style.overflowY = 'scroll';
 
-    document.body.append(elem);
+    document.body.appendChild(elem);
     let scrollbarWidth = elem.offsetWidth - elem.clientWidth;
     elem.remove();
 

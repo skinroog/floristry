@@ -40,28 +40,37 @@
 }
 
 .page-main--inner__item-picture {
+    width: 100%;
+    // height: 138%;
+    height: 443px;
+    max-height: 518px;
+    // display: flex;
+
     margin: 0;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
 }
 
 .page-main--inner__item-picture-img {
     display: block;
-    object-fit: cover;
     width: 100%;
-    max-height: 518px;
+    // max-height: 518px;
+    height: 100%;
+    object-fit: cover;
 }
+
 
 .page-main--inner__catalog-item {
     margin-bottom: 50px;
 }
 
-.page-main--inner__item-picture-wrapper {
-    display: flex;
-    width: 100%;
-}
+// .page-main--inner__item-picture-wrapper {
+//     display: flex;
+//     width: 100%;
+// }
 
 @media (min-width: $tablet-width) {
     .page-main--inner {
+        padding-top: 112px;
         padding-bottom: 20px;
     }
 
@@ -84,14 +93,8 @@
         margin-bottom: 70px;
     }
 
-    .page-main--inner {
-        padding-top: 112px;
-    }
-}
-
-@media (min-width: $desktop-width-small) {
-    .page-main__catalog {
-        margin-bottom: 160px;
+    .page-main--inner__item-picture {
+        height: 518px;
     }
 }
 
@@ -106,17 +109,20 @@
 
     .page-main--inner {
         position: relative;
+        // height:100%;
 
         padding: 0;
         display: flex;
     }
 
     .page-main--inner__item-picture {
+        // position: absolute;top: 0;bottom: 0; left: 0;
         position: relative;
 
         width: 52%;
         margin-bottom: 0;
-        display: flex;
+        max-height: 100%;
+        height: 100%;
 
         &::after {
             content: "";
@@ -133,6 +139,10 @@
         }
     }
 
+    .page-main--inner__item-picture-img {
+        width: auto;
+    }
+
     .page-main--inner__work-examples {
         margin-left: 12.34%;
         margin-bottom: 213px;
@@ -140,10 +150,6 @@
 
     .page-main--inner__catalog-items-wrapper {
         padding: 0;
-    }
-
-    .page-main--inner__item-picture-img {
-        max-height: 100%;
     }
 
     .page-main--inner__catalog-item {
@@ -155,4 +161,16 @@
     }
 }
 
+@media (min-width: $desktop-width) {
+    .page-main__intro {
+        margin-bottom: 189px;
+    }
 
+    .page-main__special-offers {
+        margin-bottom: 140px;
+    }
+
+    .page-main--inner__catalog-item {
+        margin-bottom: 100px;
+    }
+}

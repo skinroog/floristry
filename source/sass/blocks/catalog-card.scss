@@ -16,7 +16,7 @@
 
 .catalog-card__caption {
     position: absolute;
-    bottom: 20px;
+    bottom: 15px;
     left: 20px;
     z-index: 10;
 }
@@ -107,8 +107,21 @@
     }
 
     .catalog-card:hover {
-        outline: $transparent-white solid 1px;
-        outline-offset: 10px;
+        position: relative;
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            top: -10px;
+            left: -10px;
+
+            display: block;
+            width: calc(100% + 20px);
+            height: calc(100% + 20px);
+
+            border: $transparent-white solid 1px;
+        }
     }
 }
 

@@ -3,7 +3,7 @@
 
     width: 90%;
     max-width: 450px;
-    padding: 62px 5.9% 52px;
+    padding: 56px 5.9% 52px;
     box-sizing: border-box;
 
     text-align: left;
@@ -16,10 +16,10 @@
     @include heading-reset;
     width: 200px;
     margin: 0 auto;
-    margin-bottom: 47px;
+    margin-bottom: 46px;
 
     font-size: 20px;
-    line-height: 30px;
+    line-height: 32px;
     text-align: center;
     letter-spacing: 0.09em;
 }
@@ -132,8 +132,7 @@
     .modal {
         width: 716px;
         max-width: 716px;
-        padding: 66px;
-        padding-left: 335px + 66px;
+        padding: 62px 66px 66px 401px;
 
         &::after {
             content: "";
@@ -157,7 +156,7 @@
         margin-bottom: 47px;
 
         font-size: 20px;
-        line-height: 30px;
+        line-height: 32px;
     }
 
     .modal__form-field {

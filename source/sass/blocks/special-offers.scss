@@ -39,7 +39,7 @@
     text-transform: none;
 }
 
-.special-offers__picture {
+.special-offers__img {
     display: block;
     width: 100%;
     margin-bottom: 25px;
@@ -75,7 +75,7 @@
         text-align: center;
     }
 
-    .special-offers__picture {
+    .special-offers__img {
         margin-bottom: 30px;
     }
 }
@@ -102,10 +102,15 @@
          }
     }
 
-    .special-offers__picture {
-        order: 2;
+    .special-offer__img {
         width: 697px;
         margin: 0;
+
+        object-fit: cover;
+    }
+
+    .special-offers__picture {
+        display: flex;
     }
 
     .special-offers__desc {
@@ -117,6 +122,8 @@
     }
 
     .special-offers__text-wrapper {
+        order: -1;
+
         margin-top: 65px;
         width: 360px;
     }
