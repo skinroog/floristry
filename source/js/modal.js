@@ -10,8 +10,7 @@ buttonOrder.onclick = function () {
     document.body.classList.add('no-scroll');
 
     let scrollbarWidth = getScrollbarWidth();
-
-    document.body.style.paddingRight = scrollbarWidth + 8 + 'px';
+    document.body.style.paddingRight = scrollbarWidth + 'px';
 };
 
 function getScrollbarWidth() {
@@ -22,7 +21,7 @@ function getScrollbarWidth() {
 
     document.body.appendChild(elem);
     let scrollbarWidth = elem.offsetWidth - elem.clientWidth;
-    elem.remove();
+    document.body.removeChild(elem);
 
     return scrollbarWidth;
 }
@@ -32,7 +31,6 @@ function closeModal() {
     document.body.classList.remove('no-scroll');
     document.body.style.paddingRight = '';
 }
-
 
 buttonCloseModal.onclick = function () {
     if (!modalOverlay) return;

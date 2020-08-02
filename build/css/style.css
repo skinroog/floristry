@@ -817,7 +817,7 @@ template {
 }
 
 .page-main__catalog {
-  margin-bottom: 85px;
+  margin-bottom: 84px;
 }
 
 .page-main__special-offers {
@@ -914,7 +914,7 @@ template {
     margin-bottom: 178px;
   }
   .page-main__catalog {
-    margin-bottom: 160px;
+    margin-bottom: 159px;
   }
   .page-main--inner {
     position: relative;
@@ -924,8 +924,11 @@ template {
     display: flex;
   }
   .page-main--inner__item-picture {
-    position: relative;
-    width: 52%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 46%;
     margin-bottom: 0;
     max-height: 100%;
     height: 100%;
@@ -940,15 +943,14 @@ template {
     height: calc(100% - 65px);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
-  .page-main--inner__item-picture-img {
-    width: auto;
-  }
   .page-main--inner__work-examples {
     margin-left: 12.34%;
     margin-bottom: 213px;
   }
   .page-main--inner__catalog-items-wrapper {
     padding: 0;
+    margin-right: 0;
+    margin-left: 46%;
   }
   .page-main--inner__catalog-item {
     -webkit-box-ordinal-group: 1;
@@ -969,6 +971,12 @@ template {
   }
   .page-main--inner__catalog-item {
     margin-bottom: 100px;
+  }
+  .page-main--inner__item-picture {
+    width: 52%;
+  }
+  .page-main--inner__catalog-items-wrapper {
+    margin-left: 52%;
   }
 }
 
@@ -1282,7 +1290,7 @@ template {
   font-weight: normal;
   width: 288px;
   margin: 0 auto;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
   font-size: 20px;
   line-height: 34px;
   letter-spacing: 0.06em;
@@ -1297,7 +1305,7 @@ template {
 }
 
 .catalog__item {
-  margin: 12px auto;
+  margin: 13px auto;
 }
 
 @media (min-width: 768px) {
@@ -1307,7 +1315,7 @@ template {
   .catalog__title {
     position: relative;
     width: 250px;
-    margin-bottom: 40px;
+    margin-bottom: 39px;
     font-size: 30px;
     line-height: 33px;
     text-align: center;
@@ -1334,7 +1342,7 @@ template {
     background-size: contain;
   }
   .catalog__title {
-    margin-bottom: 108px;
+    margin-bottom: 107px;
   }
   .catalog__list {
     max-width: 1520px;
@@ -1444,8 +1452,8 @@ template {
   .catalog-card:hover::after {
     content: "";
     position: absolute;
-    top: -10px;
-    left: -10px;
+    top: -12px;
+    left: -11px;
     display: block;
     width: calc(100% + 20px);
     height: calc(100% + 20px);

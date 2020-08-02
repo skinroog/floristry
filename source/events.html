@@ -40,7 +40,7 @@
                     <source media="(min-width: 768px)" type="image/webp" srcset="img/events-tablet@1x.webp 1x, img/events-tablet@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/events-tablet@1x.jpg 1x, img/events-tablet@2x.jpg 2x">
                     <source type="image/webp" srcset="img/events-mobile@1x.webp 1x, img/events-mobile@2x.webp 2x">
-                    <img class="page-main--inner__item-picture-img" src="img/events-mobile@1x.jpg" srcset="img/events-mobile@1x.jpg 1x, img/events-mobile@2x.jpg 2x" alt="Оформление мероприятия">
+                    <img class="page-main--inner__item-picture-img" src="img/events-mobile@1x.jpg" srcset="img/events-mobile@1x.jpg 1x, img/events-mobile@2x.jpg 2x" data-object-fit="cover" alt="Оформление мероприятия">
                 </picture>
             </p>
 
@@ -147,6 +147,7 @@
         </div>
 
         <script src="js/script.min.js"></script>
+        <script>objectFitPolyfill();</script>
 
     </body>
 </html>

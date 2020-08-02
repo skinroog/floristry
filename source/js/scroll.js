@@ -1,8 +1,8 @@
 let anchors = [document.querySelector('.intro__button'), document.querySelector('.intro__arrow-down')];
 
-if (!anchors.includes(null)) {
+if (anchors[0] != null && anchors[1] != null) {
 
-    anchors.forEach(anchor => {
+    anchors.forEach(function(anchor) {
 
         anchor.addEventListener('click', function (event) {
             event.preventDefault();
