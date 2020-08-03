@@ -607,7 +607,7 @@ template {
 
 .main-nav__link--current:hover, .main-nav__link--current:focus, .main-nav__link--current:active {
   font-size: 15px;
-  line-height: 17px;
+  line-height: 21px;
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -730,7 +730,7 @@ template {
   }
   .main-nav__link--current:hover, .main-nav__link--current:focus, .main-nav__link--current:active {
     font-size: 30px;
-    line-height: 33px;
+    line-height: 38px;
   }
   .main-nav {
     background-color: transparent;
@@ -1207,6 +1207,8 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .social-links__link {
@@ -1214,6 +1216,7 @@ template {
   display: block;
   width: 35px;
   height: 35px;
+  margin-right: 10px;
   background-color: #3B181E;
   border-radius: 50%;
 }
@@ -1552,7 +1555,7 @@ template {
   .special-offers__title::after {
     left: 0;
   }
-  .special-offer__img {
+  .special-offers__img {
     width: 697px;
     margin: 0;
     -o-object-fit: cover;
